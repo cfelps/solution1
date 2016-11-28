@@ -1,4 +1,5 @@
 #pragma once
+#include <C:\Users\Juche\Documents\Visual Studio 2015\Projects\solution1\basketball\sampson1.h>
 
 namespace basketball {
 
@@ -35,6 +36,10 @@ namespace basketball {
 			}
 		}
 	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  button2;
+	private: System::Windows::Forms::Button^  button3;
+	private: System::Windows::Forms::Button^  button4;
+	private: System::Windows::Forms::Button^  button5;
 	protected:
 
 	private:
@@ -51,32 +56,85 @@ namespace basketball {
 		void InitializeComponent(void)
 		{
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(232, 141);
+			this->button1->Location = System::Drawing::Point(12, 27);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(352, 206);
+			this->button1->Size = System::Drawing::Size(281, 79);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"Don\'t Push This";
+			this->button1->Text = L"Brandon Sampson";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(12, 130);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(281, 79);
+			this->button2->TabIndex = 1;
+			this->button2->Text = L"Duop Reath";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(12, 234);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(281, 79);
+			this->button3->TabIndex = 2;
+			this->button3->Text = L"Antonio Blakeney";
+			this->button3->UseVisualStyleBackColor = true;
+			// 
+			// button4
+			// 
+			this->button4->Location = System::Drawing::Point(12, 338);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(281, 79);
+			this->button4->TabIndex = 3;
+			this->button4->Text = L"Elbert Robinson III";
+			this->button4->UseVisualStyleBackColor = true;
+			// 
+			// button5
+			// 
+			this->button5->Location = System::Drawing::Point(12, 440);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(281, 79);
+			this->button5->TabIndex = 4;
+			this->button5->Text = L"Skylar Mays";
+			this->button5->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoSize = true;
 			this->ClientSize = System::Drawing::Size(856, 612);
+			this->Controls->Add(this->button5);
+			this->Controls->Add(this->button4);
+			this->Controls->Add(this->button3);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"LSU Men\'s Basketball";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		
+		sampson^ Sampson = gcnew sampson();
+		Sampson->Show();
+		this->Hide();
+	}
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
 	};
 }

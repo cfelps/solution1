@@ -14,9 +14,4 @@ void Main(array<String^>^ args)
 	basketball::MyForm form;
 	Application::Run(%form);
 
-	System::Void CppWinform::sampson::button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		sampson^ Sampson = gcnew Sampson();
-		Sampson->Show();
-		this->Hide();
-	}
 }
