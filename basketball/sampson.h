@@ -35,13 +35,17 @@ namespace basketball {
 			}
 		}
 	private: System::Windows::Forms::Label^  label1;
+	public: System::Windows::Forms::DataVisualization::Charting::Chart^  chart1;
+	private:
 	protected:
-	private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart1;
+
 
 	private:
 
 	private: System::Windows::Forms::TextBox^  textBox1;
-	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	public protected: System::Windows::Forms::PictureBox^  pictureBox1;
+	private:
+
 	private: System::Windows::Forms::TextBox^  textBox2;
 	private: System::Windows::Forms::TextBox^  textBox3;
 
@@ -90,6 +94,8 @@ namespace basketball {
 			// 
 			// chart1
 			// 
+			this->chart1->AccessibleRole = System::Windows::Forms::AccessibleRole::Chart;
+			this->chart1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			chartArea1->Name = L"ChartArea1";
 			this->chart1->ChartAreas->Add(chartArea1);
 			legend1->Name = L"Legend1";
@@ -117,9 +123,10 @@ namespace basketball {
 			// 
 			this->pictureBox1->BackColor = System::Drawing::SystemColors::Window;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(26, 34);
+			this->pictureBox1->Location = System::Drawing::Point(28, 34);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(200, 200);
+			this->pictureBox1->Size = System::Drawing::Size(183, 201);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
 			this->pictureBox1->TabIndex = 4;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &sampson::pictureBox1_Click);
@@ -146,6 +153,7 @@ namespace basketball {
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSize = true;
+			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->BackColor = System::Drawing::SystemColors::Window;
 			this->ClientSize = System::Drawing::Size(1756, 911);
 			this->Controls->Add(this->textBox3);
@@ -156,6 +164,7 @@ namespace basketball {
 			this->Controls->Add(this->label1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"sampson";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Sampson, Brandon";
 			this->Load += gcnew System::EventHandler(this, &sampson::sampson_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
