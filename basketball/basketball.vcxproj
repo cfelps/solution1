@@ -149,7 +149,7 @@
     <ClInclude Include="mainform.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="sampson1.h">
+    <ClInclude Include="sampson.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -157,8 +157,8 @@
     <EmbeddedResource Include="mainform.resx">
       <DependentUpon>mainform.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sampson1.resx">
-      <DependentUpon>sampson1.h</DependentUpon>
+    <EmbeddedResource Include="sampson.resx">
+      <DependentUpon>sampson.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

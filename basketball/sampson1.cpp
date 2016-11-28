@@ -1,2 +1,2 @@
-#include "sampson1.h"
+#include "sampson.h"
 

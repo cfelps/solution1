@@ -26,8 +26,16 @@
     <ClInclude Include="mainform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="sampson1.h">
+    <ClInclude Include="sampson.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="mainform.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sampson.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

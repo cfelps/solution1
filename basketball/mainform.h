@@ -1,5 +1,5 @@
 #pragma once
-#include <C:\Users\Juche\Documents\Visual Studio 2015\Projects\solution1\basketball\sampson1.h>
+#include <C:\Users\Juche\Documents\Visual Studio 2015\Projects\solution1\basketball\sampson.h>
 
 namespace basketball {
 
