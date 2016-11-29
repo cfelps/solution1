@@ -120,7 +120,7 @@ namespace basketball {
 			this->chart1->Dock = System::Windows::Forms::DockStyle::Right;
 			legend1->Name = L"Legend1";
 			this->chart1->Legends->Add(legend1);
-			this->chart1->Location = System::Drawing::Point(704, 0);
+			this->chart1->Location = System::Drawing::Point(700, 0);
 			this->chart1->Name = L"chart1";
 			this->chart1->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::Fire;
 			series1->ChartArea = L"ChartArea1";
@@ -136,7 +136,7 @@ namespace basketball {
 			series1->XValueMember = L"1";
 			series1->YValueMembers = L"27";
 			this->chart1->Series->Add(series1);
-			this->chart1->Size = System::Drawing::Size(921, 798);
+			this->chart1->Size = System::Drawing::Size(921, 794);
 			this->chart1->TabIndex = 1;
 			this->chart1->Text = L"chart1";
 			title1->Name = L"Title1";
@@ -245,8 +245,7 @@ namespace basketball {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->BackColor = System::Drawing::Color::MediumPurple;
-			this->ClientSize = System::Drawing::Size(1625, 798);
-			this->ControlBox = false;
+			this->ClientSize = System::Drawing::Size(1621, 794);
 			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->textBox4);
@@ -288,6 +287,9 @@ private: System::Void textBox3_TextChanged(System::Object^  sender, System::Even
 }
 private: System::Void chart1_Click(System::Object^  sender, System::EventArgs^  e) {
 }
+private: System::Void sampson_FormClosing(Object^ sender, FormClosingEventArgs^ e) {
+}
+
 
 private: System::Void textBox4_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 }
