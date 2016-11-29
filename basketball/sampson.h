@@ -76,16 +76,16 @@ namespace basketball {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint7 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(1,
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint1 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(1,
 				27));
-			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint8 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(2,
+			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint2 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(2,
 				4));
-			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint9 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(3,
+			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint3 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(3,
 				32.1));
-			System::Windows::Forms::DataVisualization::Charting::Title^  title3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
+			System::Windows::Forms::DataVisualization::Charting::Title^  title1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(sampson::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
@@ -115,32 +115,32 @@ namespace basketball {
 			this->chart1->AccessibleRole = System::Windows::Forms::AccessibleRole::Chart;
 			this->chart1->BackColor = System::Drawing::Color::MediumPurple;
 			this->chart1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			chartArea3->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea3);
+			chartArea1->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea1);
 			this->chart1->Dock = System::Windows::Forms::DockStyle::Right;
-			legend3->Name = L"Legend1";
-			this->chart1->Legends->Add(legend3);
+			legend1->Name = L"Legend1";
+			this->chart1->Legends->Add(legend1);
 			this->chart1->Location = System::Drawing::Point(704, 0);
 			this->chart1->Name = L"chart1";
 			this->chart1->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::Fire;
-			series3->ChartArea = L"ChartArea1";
-			series3->Legend = L"Legend1";
-			series3->Name = L"2015-2016 Stats";
-			dataPoint7->Label = L"Games Played";
-			dataPoint8->Label = L"PPG";
-			dataPoint8->LabelFormat = L"";
-			dataPoint9->Label = L"FG %";
-			series3->Points->Add(dataPoint7);
-			series3->Points->Add(dataPoint8);
-			series3->Points->Add(dataPoint9);
-			series3->XValueMember = L"1";
-			series3->YValueMembers = L"27";
-			this->chart1->Series->Add(series3);
+			series1->ChartArea = L"ChartArea1";
+			series1->Legend = L"Legend1";
+			series1->Name = L"2015-2016 Stats";
+			dataPoint1->Label = L"Games Played";
+			dataPoint2->Label = L"PPG";
+			dataPoint2->LabelFormat = L"";
+			dataPoint3->Label = L"FG %";
+			series1->Points->Add(dataPoint1);
+			series1->Points->Add(dataPoint2);
+			series1->Points->Add(dataPoint3);
+			series1->XValueMember = L"1";
+			series1->YValueMembers = L"27";
+			this->chart1->Series->Add(series1);
 			this->chart1->Size = System::Drawing::Size(921, 798);
 			this->chart1->TabIndex = 1;
 			this->chart1->Text = L"chart1";
-			title3->Name = L"Title1";
-			this->chart1->Titles->Add(title3);
+			title1->Name = L"Title1";
+			this->chart1->Titles->Add(title1);
 			this->chart1->Click += gcnew System::EventHandler(this, &sampson::chart1_Click);
 			// 
 			// textBox1
@@ -257,8 +257,12 @@ namespace basketball {
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->chart1);
 			this->Controls->Add(this->label1);
+			this->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"sampson";
+			this->ShowIcon = false;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Sampson, Brandon";
 			this->Load += gcnew System::EventHandler(this, &sampson::sampson_Load);
@@ -271,6 +275,7 @@ namespace basketball {
 #pragma endregion
 	private: System::Void sampson_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
+
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e);
 
 	private: System::Void linkLabel1_LinkClicked(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) {
@@ -286,5 +291,6 @@ private: System::Void chart1_Click(System::Object^  sender, System::EventArgs^  
 
 private: System::Void textBox4_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 }
+
 };
 }
