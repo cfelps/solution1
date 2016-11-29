@@ -20,3 +20,10 @@ System::Void basketball::MyForm::button1_Click(System::Object^  sender, System::
 	secondForm->Show();
 	this->Hide();
 }
+
+System::Void basketball::MyForm::button6_Click(System::Object^  sender, System::EventArgs^  e) {
+	Application::Exit();
+}
+
+	
+

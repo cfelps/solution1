@@ -40,6 +40,7 @@ namespace basketball {
 	private: System::Windows::Forms::Button^  button3;
 	private: System::Windows::Forms::Button^  button4;
 	private: System::Windows::Forms::Button^  button5;
+	private: System::Windows::Forms::Button^  button6;
 	protected:
 
 	private:
@@ -60,6 +61,7 @@ namespace basketball {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button1
@@ -109,18 +111,33 @@ namespace basketball {
 			this->button5->Text = L"Skylar Mays";
 			this->button5->UseVisualStyleBackColor = true;
 			// 
+			// button6
+			// 
+			this->button6->Location = System::Drawing::Point(644, 537);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(141, 65);
+			this->button6->TabIndex = 5;
+			this->button6->Text = L"Quit";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSize = true;
 			this->ClientSize = System::Drawing::Size(856, 612);
+			this->ControlBox = false;
+			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"MyForm";
+			this->ShowIcon = false;
 			this->Text = L"LSU Men\'s Basketball";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->ResumeLayout(false);
@@ -129,6 +146,7 @@ namespace basketball {
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e);
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {}
-	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {}
-	};
+	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {	}
+	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e);
+};
 }
