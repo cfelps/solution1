@@ -15,3 +15,8 @@ void Main(array<String^>^ args)
 	Application::Run(%form);
 
 }
+System::Void basketball::MyForm::button1_Click(System::Object^  sender, System::EventArgs^  e) {
+	sampson^ secondForm = gcnew sampson();
+	secondForm->Show();
+	this->Hide();
+}
