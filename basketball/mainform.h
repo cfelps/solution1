@@ -127,8 +127,7 @@ namespace basketball {
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e);
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {}
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {}
 	};
