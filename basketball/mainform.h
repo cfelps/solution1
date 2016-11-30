@@ -138,6 +138,7 @@ namespace basketball {
 			this->MinimizeBox = false;
 			this->Name = L"MyForm";
 			this->ShowIcon = false;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"LSU Men\'s Basketball";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->ResumeLayout(false);

@@ -44,16 +44,16 @@ namespace basketball {
 
 	private:
 
-	private: System::Windows::Forms::TextBox^  textBox1;
+
 	public protected: System::Windows::Forms::PictureBox^  pictureBox1;
 	private:
 
-	private: System::Windows::Forms::TextBox^  textBox2;
-	private: System::Windows::Forms::TextBox^  textBox3;
+
+
 	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::TextBox^  textBox4;
-	private: System::Windows::Forms::TextBox^  textBox5;
-	private: System::Windows::Forms::TextBox^  textBox6;
+
+
+
 
 
 	private:
@@ -76,27 +76,24 @@ namespace basketball {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint1 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(1,
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::CustomLabel^  customLabel5 = (gcnew System::Windows::Forms::DataVisualization::Charting::CustomLabel());
+			System::Windows::Forms::DataVisualization::Charting::CustomLabel^  customLabel6 = (gcnew System::Windows::Forms::DataVisualization::Charting::CustomLabel());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint9 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(1,
 				27));
-			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint2 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(2,
+			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint10 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(2,
 				4));
-			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint3 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(3,
+			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint11 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(3,
 				32.1));
-			System::Windows::Forms::DataVisualization::Charting::Title^  title1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
+			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint12 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(4,
+				26.9));
+			System::Windows::Forms::DataVisualization::Charting::Title^  title3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(sampson::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
@@ -104,63 +101,60 @@ namespace basketball {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(21, 212);
+			this->label1->Location = System::Drawing::Point(21, 230);
+			this->label1->Margin = System::Windows::Forms::Padding(3);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(299, 25);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"2015 - 2016 Season Statistics";
+			this->label1->Click += gcnew System::EventHandler(this, &sampson::label1_Click);
 			// 
 			// chart1
 			// 
 			this->chart1->AccessibleRole = System::Windows::Forms::AccessibleRole::Chart;
 			this->chart1->BackColor = System::Drawing::Color::MediumPurple;
 			this->chart1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			chartArea1->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea1);
+			customLabel5->Text = L"GP";
+			chartArea3->AxisX->CustomLabels->Add(customLabel5);
+			chartArea3->AxisX->CustomLabels->Add(customLabel6);
+			chartArea3->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea3);
 			this->chart1->Dock = System::Windows::Forms::DockStyle::Right;
-			legend1->Name = L"Legend1";
-			this->chart1->Legends->Add(legend1);
-			this->chart1->Location = System::Drawing::Point(700, 0);
+			this->chart1->Location = System::Drawing::Point(809, 0);
 			this->chart1->Name = L"chart1";
+			this->chart1->Padding = System::Windows::Forms::Padding(3);
 			this->chart1->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::Fire;
-			series1->ChartArea = L"ChartArea1";
-			series1->Legend = L"Legend1";
-			series1->Name = L"2015-2016 Stats";
-			dataPoint1->Label = L"Games Played";
-			dataPoint2->Label = L"PPG";
-			dataPoint2->LabelFormat = L"";
-			dataPoint3->Label = L"FG %";
-			series1->Points->Add(dataPoint1);
-			series1->Points->Add(dataPoint2);
-			series1->Points->Add(dataPoint3);
-			series1->XValueMember = L"1";
-			series1->YValueMembers = L"27";
-			this->chart1->Series->Add(series1);
-			this->chart1->Size = System::Drawing::Size(921, 794);
+			series3->ChartArea = L"ChartArea1";
+			series3->Name = L"2015-2016 Stats";
+			dataPoint9->Label = L"Games Played";
+			dataPoint9->ToolTip = L"27#AXISLABEL";
+			dataPoint10->Label = L"PPG";
+			dataPoint10->LabelFormat = L"";
+			dataPoint10->ToolTip = L"4#AXISLABEL";
+			dataPoint11->Label = L"FG %";
+			dataPoint11->ToolTip = L"32.1#AXISLABEL";
+			dataPoint12->Label = L"3FG%";
+			dataPoint12->LegendToolTip = L"";
+			dataPoint12->ToolTip = L"26.9#AXISLABEL";
+			series3->Points->Add(dataPoint9);
+			series3->Points->Add(dataPoint10);
+			series3->Points->Add(dataPoint11);
+			series3->Points->Add(dataPoint12);
+			series3->XValueMember = L"1";
+			series3->YValueMembers = L"27";
+			this->chart1->Series->Add(series3);
+			this->chart1->Size = System::Drawing::Size(890, 890);
 			this->chart1->TabIndex = 1;
 			this->chart1->Text = L"chart1";
-			title1->Name = L"Title1";
-			this->chart1->Titles->Add(title1);
+			title3->Name = L"Title1";
+			this->chart1->Titles->Add(title3);
 			this->chart1->Click += gcnew System::EventHandler(this, &sampson::chart1_Click);
-			// 
-			// textBox1
-			// 
-			this->textBox1->BackColor = System::Drawing::Color::MediumPurple;
-			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.125F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(26, 267);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(192, 31);
-			this->textBox1->TabIndex = 3;
-			this->textBox1->Text = L"Games played: ";
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &sampson::textBox1_TextChanged);
 			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->BackColor = System::Drawing::SystemColors::Window;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(26, 34);
+			this->pictureBox1->Location = System::Drawing::Point(110, 42);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(114, 122);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -168,33 +162,9 @@ namespace basketball {
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &sampson::pictureBox1_Click);
 			// 
-			// textBox2
-			// 
-			this->textBox2->BackColor = System::Drawing::Color::MediumPurple;
-			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.125F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox2->Location = System::Drawing::Point(26, 320);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(211, 31);
-			this->textBox2->TabIndex = 5;
-			this->textBox2->Text = L"Points per game:";
-			// 
-			// textBox3
-			// 
-			this->textBox3->BackColor = System::Drawing::Color::MediumPurple;
-			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.125F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox3->Location = System::Drawing::Point(26, 377);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(192, 31);
-			this->textBox3->TabIndex = 6;
-			this->textBox3->Text = L"FG Percentage: ";
-			this->textBox3->TextChanged += gcnew System::EventHandler(this, &sampson::textBox3_TextChanged);
-			// 
 			// button1
 			// 
+			this->button1->DialogResult = System::Windows::Forms::DialogResult::Cancel;
 			this->button1->Location = System::Drawing::Point(5, 671);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(135, 50);
@@ -203,57 +173,17 @@ namespace basketball {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &sampson::button1_Click);
 			// 
-			// textBox4
-			// 
-			this->textBox4->BackColor = System::Drawing::Color::MediumPurple;
-			this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.125F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox4->Location = System::Drawing::Point(262, 266);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(58, 31);
-			this->textBox4->TabIndex = 8;
-			this->textBox4->Text = L"27";
-			// 
-			// textBox5
-			// 
-			this->textBox5->BackColor = System::Drawing::Color::MediumPurple;
-			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.125F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox5->Location = System::Drawing::Point(262, 319);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(58, 31);
-			this->textBox5->TabIndex = 9;
-			this->textBox5->Text = L"4.0";
-			// 
-			// textBox6
-			// 
-			this->textBox6->BackColor = System::Drawing::Color::MediumPurple;
-			this->textBox6->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.125F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox6->Location = System::Drawing::Point(262, 377);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(58, 31);
-			this->textBox6->TabIndex = 10;
-			this->textBox6->Text = L"32.1";
-			// 
 			// sampson
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->BackColor = System::Drawing::Color::MediumPurple;
-			this->ClientSize = System::Drawing::Size(1621, 794);
-			this->Controls->Add(this->textBox6);
-			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->textBox4);
+			this->CancelButton = this->button1;
+			this->ClientSize = System::Drawing::Size(1699, 890);
+			this->ControlBox = false;
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->pictureBox1);
-			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->chart1);
 			this->Controls->Add(this->label1);
 			this->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
@@ -272,8 +202,9 @@ namespace basketball {
 
 		}
 #pragma endregion
-	private: System::Void sampson_Load(System::Object^  sender, System::EventArgs^  e) {
-	}
+	private: System::Void sampson_Load(System::Object^  sender, System::EventArgs^  e) {};
+	
+
 
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e);
 
@@ -294,5 +225,7 @@ private: System::Void sampson_FormClosing(Object^ sender, FormClosingEventArgs^ 
 private: System::Void textBox4_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 }
 
+private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
+}
 };
 }
